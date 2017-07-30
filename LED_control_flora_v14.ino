@@ -678,7 +678,7 @@ void linePattern(){
   if(sound) return;
 }
 void lineGenerator(uint8_t r, uint8_t g, uint8_t b,int wait){
-  uint8_t col = random(5,9);
+  uint8_t col = random(5,10);
   for(uint8_t i = 0; i < 5; i++){
      if(r == 0 && g ==0 && b == 0)following(r, g, b, col, 1, 50);
      else following(r, g, b, col, 0, 50);
@@ -707,7 +707,7 @@ void following(uint8_t red1, uint8_t green1, uint8_t blue1,uint8_t col, boolean 
   
   if(col%2 > 0){
     //Serial.println("odd");
-    uint8_t otherCol1 = random(1, 13);
+    uint8_t otherCol1 = random(1, 14);
     getBoundaries(otherCol1);
     if(otherCol1%2 > 0){
       pixelPrev = lastPixel;
@@ -717,7 +717,7 @@ void following(uint8_t red1, uint8_t green1, uint8_t blue1,uint8_t col, boolean 
       pixelPrev = firstPixel;
       rangePrev = lastPixel - firstPixel;
     }
-    uint8_t otherCol2 = random(1, 13);
+    uint8_t otherCol2 = random(1, 14);
     getBoundaries(otherCol2);
     if(otherCol2%2 > 0){
       pixelNext = lastPixel;
@@ -760,7 +760,7 @@ void following(uint8_t red1, uint8_t green1, uint8_t blue1,uint8_t col, boolean 
   }
   else{
     //Serial.println("even");
-    uint8_t otherCol1 = random(1, 13);
+    uint8_t otherCol1 = random(1, 14);
     getBoundaries(otherCol1);
     if(otherCol1%2 > 0){
       pixelPrev = lastPixel;
@@ -770,7 +770,7 @@ void following(uint8_t red1, uint8_t green1, uint8_t blue1,uint8_t col, boolean 
       pixelPrev = firstPixel;
       rangePrev = lastPixel - firstPixel;
     }
-    uint8_t otherCol2 = random(1, 13);
+    uint8_t otherCol2 = random(1, 14);
     getBoundaries(otherCol2);
     if(otherCol2%2 > 0){
       pixelNext = lastPixel;
